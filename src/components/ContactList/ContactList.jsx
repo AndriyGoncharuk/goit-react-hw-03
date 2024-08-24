@@ -1,6 +1,4 @@
-// src/components/ContactList/ContactList.jsx
-import React from "react";
-import Contact from "./Contact/Contact";
+import Contact from ".//Contact/Contact";
 import styles from "./ContactList.module.css";
 
 const ContactList = ({ contacts, onDeleteContact }) => (

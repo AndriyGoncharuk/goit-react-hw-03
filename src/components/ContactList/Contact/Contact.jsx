@@ -1,5 +1,3 @@
-// src/components/Contact/Contact.jsx
-import React from "react";
 import styles from "./Contact.module.css";
 
 const Contact = ({ name, number, onDelete }) => (
