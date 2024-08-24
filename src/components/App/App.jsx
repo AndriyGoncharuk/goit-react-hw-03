@@ -5,6 +5,7 @@ import ContactList from "../ContactList/ContactList";
 import { nanoid } from "nanoid";
 import styles from "./App.module.css";
 import initialContact from "../../contactData.json";
+import { FaAddressBook } from "react-icons/fa";
 
 const getInitialValues = () => {
   const savedValues = window.localStorage.getItem("my-contacts");
@@ -48,7 +49,9 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Phonebook</h1>
+      <h1 className={styles.header}>
+        Phonebook <FaAddressBook />
+      </h1>
       <ContactForm onSubmit={addContact} />
       <SearchBox value={filter} onChange={handleFilterChange} />
       <ContactList

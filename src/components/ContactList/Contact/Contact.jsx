@@ -1,14 +1,23 @@
+import { FaUser } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
-const Contact = ({ name, number, onDelete }) => (
-  <li className={styles.item}>
-    <p className={styles.text}>
-      {name}: {number}
-    </p>
-    <button className={styles.button} onClick={onDelete}>
+const Contact = ({ name, number, id, onDelete }) => (
+  <div className={styles.contact}>
+    <div className={styles.contactText}>
+      <span>
+        <FaUser className={styles.contactIcon} />
+        {name}
+      </span>
+      <span>
+        <FaPhoneAlt className={styles.contactIcon} />
+        {number}
+      </span>
+    </div>
+    <button onClick={() => onDelete(id)} className={styles.btn}>
       Delete
     </button>
-  </li>
+  </div>
 );
 
 export default Contact;
